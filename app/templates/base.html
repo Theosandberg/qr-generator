@@ -1,0 +1,14 @@
+<html>
+    <head>
+      {% if title %}
+      <title>{{ title }} - QR Generator</title>
+      {% else %}
+      <title>Welcome to this Generator</title>
+      {% endif %}
+    </head>
+    <body>
+        <div>QRmaker <a href="/qrcode">Make</a></div>
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>

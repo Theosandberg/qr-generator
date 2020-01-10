@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<img src="{{ url_for('static', filename='qrcodes/{}.png'.format(id)) }}">
+
+<a href="{{ url_for('static', filename='qrcodes/{}.png'.format(id)) }}" download="qrkod.png">Download</a>
+
+{% endblock %}

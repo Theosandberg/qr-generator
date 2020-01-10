@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.qrgen.label }}<br>
+            {{ form.qrgen(size=32) }}<br>
+            {% for error in form.qrgen.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+
+        </p>
+
+        <p>{{ form.submit() }}</p>
+    </form>
+{% endblock %}
